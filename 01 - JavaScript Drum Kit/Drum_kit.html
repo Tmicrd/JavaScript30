@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      user-scable="no"
+    />
+    <link rel="stylesheet" href="./Drum_kit.css" />
+    <title>Drum Kit</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="keys">
+        <div data-key="65" class="key">
+          <kbd>A</kbd>
+          <span class="sound">animals</span>
+        </div>
+        <div data-key="83" class="key">
+          <kbd>S</kbd>
+          <span class="sound">bird</span>
+        </div>
+        <div data-key="68" class="key">
+          <kbd>D</kbd>
+          <span class="sound">bull</span>
+        </div>
+        <div data-key="70" class="key">
+          <kbd>F</kbd>
+          <span class="sound">cat</span>
+        </div>
+        <div data-key="71" class="key">
+          <kbd>G</kbd>
+          <span class="sound">cock</span>
+        </div>
+        <div data-key="72" class="key">
+          <kbd>H</kbd>
+          <span class="sound">cricket</span>
+        </div>
+        <div data-key="74" class="key">
+          <kbd>J</kbd>
+          <span class="sound">horse</span>
+        </div>
+        <div data-key="75" class="key">
+          <kbd>K</kbd>
+          <span class="sound">sheep</span>
+        </div>
+        <div data-key="76" class="key">
+          <kbd>L</kbd>
+          <span class="sound">tiger</span>
+        </div>
+      </div>
+      <audio data-key="65" src="sound/animals.mp3"></audio>
+      <audio data-key="83" src="sound/bird.mp3"></audio>
+      <audio data-key="68" src="sound/bull.mp3"></audio>
+      <audio data-key="70" src="sound/cat.mp3"></audio>
+      <audio data-key="71" src="sound/cock.mp3"></audio>
+      <audio data-key="72" src="sound/cricket.mp3"></audio>
+      <audio data-key="74" src="sound/horse.mp3"></audio>
+      <audio data-key="75" src="sound/sheep.mp3"></audio>
+      <audio data-key="76" src="sound/tiger.mp3"></audio>
+    </div>
+  </body>
+  <script src="./Drum_kit.js"></script>
+</html>
