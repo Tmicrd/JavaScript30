@@ -1,0 +1,61 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background: #b2f9fc;
+}
+
+:root {
+  --primary-color: #9d9d9d;
+}
+
+.search-form {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.search {
+  width: 45%;
+  height: 5rem;
+  margin-top: 4rem;
+  outline: none;
+  font-size: 2rem;
+  background: #b2f9fc;
+  border: none;
+  border-bottom: 1px solid var(--primary-color);
+  padding-left: 2rem;
+  -webkit-appearance: none;
+}
+
+::-webkit-input-placeholder {
+  color: var(--primary-color);
+}
+
+.suggestions {
+  margin: 0 auto;
+  margin-top: 0.5rem;
+  width: 40%;
+}
+
+.suggestions > li {
+  margin-left: -3rem;
+  list-style: none;
+  color: var(--primary-color);
+  height: 2rem;
+  line-height: 3rem;
+  padding-left: 2rem;
+  border: 1px solid var(--primary-color);
+  box-shadow: 0 0 1px var(--primary-color);
+<<<<<<< HEAD
+  font-weight: 300;
+=======
+>>>>>>> main
+  margin-top: -1px;
+  font-weight: 300;
+  transform: skewX(-5deg);
+}
+
+.hl {
+  background: #06FF00;
+}

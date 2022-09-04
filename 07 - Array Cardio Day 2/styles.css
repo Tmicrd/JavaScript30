@@ -1,0 +1,90 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #36AE7C;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    width: 100%;
+}
+
+.page-container input {
+    outline: none;
+    border: none;
+    appearance: none;
+}
+
+.letters-wrapper {
+    text-align: center;
+}
+
+.get-random-btn {
+    width: 18rem !important;
+}
+
+.letters {
+    max-width: 20%;
+    height: 9rem;
+    line-height: 9rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    word-break: break-all;
+    color: #28FFBF;
+    border-radius: 50%;
+    box-shadow: 0 0 0.1rem;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    background-color: #070b84;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80' width='80' height='80'%3E%3Cpath fill='%236b6b6b' fill-opacity='0.44' d='M14 16H9v-2h5V9.87a4 4 0 1 1 2 0V14h5v2h-5v15.95A10 10 0 0 0 23.66 27l-3.46-2 8.2-2.2-2.9 5a12 12 0 0 1-21 0l-2.89-5 8.2 2.2-3.47 2A10 10 0 0 0 14 31.95V16zm40 40h-5v-2h5v-4.13a4 4 0 1 1 2 0V54h5v2h-5v15.95A10 10 0 0 0 63.66 67l-3.47-2 8.2-2.2-2.88 5a12 12 0 0 1-21.02 0l-2.88-5 8.2 2.2-3.47 2A10 10 0 0 0 54 71.95V56zm-39 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm40-40a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM15 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm40 40a2 2 0 1 0 0-4 2 2 0 0 0 0 4z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+.methods-wrapper {
+    /* margin: 0 auto; */
+    text-align: center;
+}
+
+.hint {
+    font-size: 0.8rem;
+    color: #001E6C;
+    margin: 0;
+    /* margin-top: 1rem; */
+}
+
+.btn,
+.result {
+    background: #187498;
+    color: #fff;
+    width: 9rem;
+    height: 1.8rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    letter-spacing: 0.05rem;
+}
+
+.btn:hover {
+  cursor: pointer;  
+  color: #F2F2F2;
+  box-shadow: 0 0 0.2rem #fff;
+  content: attr(see if there is a number '3');
+}
+
+.result {
+    margin: auto;
+    margin-top: 1rem;
+    background: #F9D923;
+    width: 18rem;
+    text-align: center;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 3.5rem;
+    border-radius: 0.5rem;
+    display: none;
+}
+
+@media screen and (max-width: 680px) {
+    .letters {
+        font-size: 1.3rem;
+    }
+}

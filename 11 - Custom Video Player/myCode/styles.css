@@ -1,0 +1,88 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #b6eb7a;
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.player {
+  margin: 5rem auto;
+  width: 60%;
+  min-width: 320px;
+  overflow: hidden;
+  position: relative;
+}
+
+.player_slider {
+  color: hsl(26, 97%, 53%);
+  -webkit-appearance: none;
+  background: #f7f7ee;
+  height: 8px;
+  min-width: 1rem;
+  border-radius: 3px;
+  cursor: pointer;
+  flex: 1;
+}
+
+.viewer {
+  width: 100%;
+}
+
+.progress {
+  width: 100%;
+  height: 0.3rem;
+  min-height: 0.1rem;
+  background: rgba(0, 0, 0, .3);
+  flex-basis: 100%;
+  cursor: ew-resize;
+  display: flex;
+}
+
+.progress_filled {
+  background: #fb7813;
+}
+
+.player_controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s;
+  transform: translateY(100%) translateY(3rem);
+  width: 100%;
+  max-height: 20%;
+  position: absolute;
+  bottom: 1rem;
+}
+
+.player_controls > *:not(.progress) {
+  flex: 1;
+}
+
+.player:hover .progress {
+  height: 0.8rem;
+}
+
+.player:hover .player_controls {
+  transform: translateY(0);
+}
+
+.player_button {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px;
+  height: 10px;
+  background: #17706E;
+}

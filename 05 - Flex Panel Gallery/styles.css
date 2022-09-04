@@ -1,0 +1,97 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+.panel-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.panel {
+  height: 35rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #001e6c;
+  transition: all 0.3s cubic-bezier(0.72, 0.22, 0.57, 0.66);
+}
+
+.panel > p {
+  transition: all 0.7s ease-in-out;
+}
+
+.panel:hover {
+  flex: 5;
+}
+
+.panel:hover p:nth-child(1) {
+  transform: translateY(10rem);
+  font-size: 2.5rem;
+  color: #001e6c;
+}
+
+.panel:hover p:nth-child(2) {
+  transform: translateY(-10rem);
+  font-size: 2.5rem;
+  color: #8e3200;
+}
+
+.panel > p:nth-child(1) {
+  position: relative;
+  top: -1.5rem;
+  color: #8e3200;
+}
+
+.panel > p:nth-child(2) {
+  position: relative;
+  bottom: -1.5rem;
+}
+
+.panel1 {
+  background: linear-gradient(135deg, #ffaa85 10%, #b3315f 100%);
+}
+
+.panel2 {
+  background: linear-gradient(135deg, #ffe985 10%, #fa742b 100%);
+}
+
+.panel3 {
+  background: linear-gradient(135deg, #fab2ff 10%, #1904e5 100%);
+}
+
+.panel4 {
+  background: linear-gradient(135deg, #fff720 10%, #3cd500 100%);
+}
+
+.panel5 {
+  background: linear-gradient(135deg, #f6d242 10%, #ff52e5 100%);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .panels {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .panels {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .panels {
+    font-size: 1.2rem;
+  }
+}
+
+/* add */

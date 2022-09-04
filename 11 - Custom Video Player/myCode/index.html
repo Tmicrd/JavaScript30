@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="player">
+      <video
+        class="player_video viewer"
+        src="https://player.vimeo.com/external/194837908.sd.mp4?s=c350076905b78c67f74d7ee39fdb4fef01d12420&profile_id=164"
+      ></video>
+      <div class="player_controls">
+        <div class="progress">
+          <div class="progress_filled"></div>
+        </div>
+        <button class="player_button toggle" title="TogglePlay">►</button>
+        <input
+          class="player_slider"
+          type="range"
+          name="volume"
+          min="0"
+          max="1"
+          step="0.05"
+          value="1"
+        />
+        <input
+          class="player_slider"
+          type="range"
+          name="playbackRate"
+          min="0.5"
+          max="2"
+          step="0.1"
+          value="1"
+        />
+        <button class="player_button" data-skip="-10">« -15s</button>
+        <button class="player_button" data-skip="25">15s »</button>
+      </div>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

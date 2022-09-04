@@ -1,0 +1,80 @@
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #564a4a;
+}
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20rem;
+  width: 80%;
+}
+
+.balloon-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.balloon {
+  width: 4rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: #f55c47;
+  transition: all 15s ease-in-out;
+}
+
+.flyAway {
+    transform: translateY(-20rem) scale(0.3);
+}
+
+.handle {
+  width: 0.1rem;
+  height: 12rem;
+  border-radius: 10%;
+  background: #9fe6a0;
+}
+
+.foundation {
+  width: 0.7rem;
+  height: 0rem;
+  border-radius: 20%;
+  border: 1rem solid transparent;
+  border-bottom: 1rem solid #4aa96c;
+  margin-top: -1rem;
+}
+
+.handle-short {
+  height: 5.5rem;
+  text-align: cennter;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 400;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+span {
+  color: #f55c47;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 760px) {
+  .balloon {
+    width: 80%;
+  }
+  .balloo-wrapper {
+    max-width: 750px;
+    min-width: 590px;
+  }
+}
