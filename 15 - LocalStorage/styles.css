@@ -1,0 +1,32 @@
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    box-sizing: border-box;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    background: "pink";
+}
+
+h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    padding: 20px;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.todoList {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
