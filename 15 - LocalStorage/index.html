@@ -5,18 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>LocalStorage and Event Delagation</title>
+    <title>LocalStorage</title>
   </head>
   <body>
     <div class="container">
       <h2>TODO LIST</h2>
-      <p></p>
-      <ul class="todoList">
-        <li>Nothing to do ???</li>
-      </ul>
+      <ul class="todoList"></ul>
       <form action="" class="add-items">
-        <input type="text" name="item" placeholder="Add some..." required />
+        <input
+          type="text"
+          name="item"
+          placeholder="Add items here..."
+          required
+        />
         <input type="submit" value="+ Add Item" />
+        <div class="inputWrapper">
+          <input type="button" value="Check all" class="check-all" />
+          <input type="button" value="Uncheck all" class="uncheck-all" />
+          <input type="button" value="Clear all" class="clear-all" />
+        </div>
       </form>
     </div>
   </body>
