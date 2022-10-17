@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      html,
+      body {
+        background: #293462;
+        width: 100vw;
+        height: 100vh;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      input {
+        margin-bottom: 30px;
+        border-radius: 15px;
+        padding: 20px;
+        outline: none;
+      }
+
+      li {
+        margin: 15px;
+        list-style: none;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .wrapper,
+      input {
+        color: #1cd6ce;
+        font-size: 1.1em;
+        font-weight: 900;
+      }
+    </style>
+    <div class="wrapper">
+      <input type="button" value="Click to sort band names" />
+      <ul class="bands"></ul>
+    </div>
+
+    <script>
+      const bands = [
+        "The Plot in You",
+        "The Devil Wears Prada",
+        "Pierce the Veil",
+        "Norma Jean",
+        "The Bled",
+        "Say Anything",
+        "The Midway State",
+        "We Came as Romans",
+        "Counterparts",
+        "Oh, Sleeper",
+        "A Skylit Drive",
+        "Anywhere But Here",
+        "An Old Dog",
+      ];
+
+      const item = document.querySelector(".bands");
+      const button = document.querySelector("[type=button]");
+
+      item.innerHTML = bands.map((band) => `<li>${band}</li>`).join("");
+
+      function strip(bandName) {
+        return bandName.replace(/^(the |an |a )/i, "").trim();
+      }
+
+      const handleSort = () => {
+        const sortedBands = bands.sort((a, b) =>
+          strip(a) > strip(b) ? 1 : -1
+        );
+        item.innerHTML = sortedBands.map((band) => `<li>${band}</li>`).join("");
+      };
+
+      button.addEventListener("click", handleSort);
+    </script>
+  </body>
+</html>
