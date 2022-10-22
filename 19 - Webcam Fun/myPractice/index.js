@@ -35,7 +35,7 @@ function paintToCanvas() {
     let pixels = ctx.getImageData(0, 0, width, height);
     // mess with the pixels
     // pixels = redEffect(pixels);
-    pixels = rgbSplit(pixels);
+    // pixels = rgbSplit(pixels);
     // put the pixels back
     ctx.putImageData(pixels, 0, 0);
   }, 16);
@@ -49,32 +49,59 @@ function takePhoto() {
 
   const data = canvas.toDataURL("image/png"); // blob
   const link = document.createElement("a");
-  let time = new Date().getDate();
 
   link.href = data;
   link.setAttribute("download", `snap`);
   link.innerHTML = `<img src="${data}" alt="SNAP"/>`;
   strip.insertBefore(link, strip.firstChild);
-  console.log("data: ", data);
 }
 
-function redEffect(pixels) {
-  for (let i = 0; i < pixels.data.length; i += 4) {
-    pixels.data[i + 0] = pixels.data[i + 0] + 190; // RED
-    pixels.data[i + 1] = pixels.data[i + 1] + 500; // GREEN
-    pixels.data[i + 2] = pixels.data[i + 2] + 800; // Blue
-  }
-  return pixels;
-}
+// function redEffect(pixels) {
+//   for (let i = 0; i < pixels.data.length; i += 4) {
+//     pixels.data[i + 0] = pixels.data[i + 0] + 210; // RED
+//     pixels.data[i + 1] = pixels.data[i + 1] - 200; // GREEN
+//     pixels.data[i + 2] = pixels.data[i + 2] * 0.3; // Blue
+//   }
+//   return pixels;
+// }
 
-function rgbSplit(pixels) {
-  for (let i = 0; i < pixels.data.length; i += 4) {
-    pixels.data[i - 50] = pixels.data[i + 0]; // RED
-    pixels.data[i + 60] = pixels.data[i + 1]; // GREEN
-    pixels.data[i - 30] = pixels.data[i + 2]; // Blue
-  }
-  return pixels;
-}
+// function rgbSplit(pixels) {
+//   for (let i = 0; i < pixels.data.length; i += 4) {
+//     pixels.data[i - 50] = pixels.data[i + 0]; // RED
+//     pixels.data[i + 120] = pixels.data[i + 1]; // GREEN
+//     pixels.data[i - 60] = pixels.data[i + 2]; // Blue
+//   }
+//   return pixels;
+// }
+
+// function greenScreen(pixels) {
+//   const levels = {};
+
+//   document.querySelectorAll(".rgb input").forEach((input) => {
+//     levels[input.name] = input.value;
+//   });
+
+//   for (i = 0; i < pixels.data.length; i = i + 4) {
+//     red = pixels.data[i + 0];
+//     green = pixels.data[i + 1];
+//     blue = pixels.data[i + 2];
+//     alpha = pixels.data[i + 3];
+
+//     if (
+//       red >= levels.rmin &&
+//       green >= levels.gmin &&
+//       blue >= levels.bmin &&
+//       red <= levels.rmax &&
+//       green <= levels.gmax &&
+//       blue <= levels.bmax
+//     ) {
+//       // take it out!
+//       pixels.data[i + 3] = 0;
+//     }
+//   }
+
+//   return pixels;
+// }
 
 getVideo();
 
